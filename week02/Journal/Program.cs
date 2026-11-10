@@ -8,7 +8,7 @@ class Program
         Journal journal = new Journal();
         Entry anEntry = new Entry();
         PromptGenerator promptGenerator = new PromptGenerator();
-        anEntry.DisplayEntry();
+  
 
         while (true)
         {
