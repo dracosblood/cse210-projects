@@ -1,5 +1,11 @@
 // Create for Darwin J Tovar.
 //for CSE210 in BYU Pathway worldwide.
+// this program content:
+// 1. receive the reference and the full text of the verse
+// Split the text by spaces and create a Word object for each word.
+// 2. look for all the words that are not yet hidden
+// 3. a word is selected at random and then hidden
+ //4. Check if all the words are already hidden
 
 using System;
 using System.Collections.Generic;
@@ -9,13 +15,13 @@ public class Scripture
     private Reference _reference;
     private List<Word> _words;
 
-    // receive the reference and the full text of the verse
+    
     public Scripture(Reference reference, string text)
     {
         _reference = reference;
         _words = new List<Word>();
 
-        // Split the text by spaces and create a Word object for each word.
+        
         string[] splitText = text.Split(' ');
         foreach (string wordText in splitText)
         {
@@ -26,7 +32,7 @@ public class Scripture
    
     public void HideRandomWords(int numberToHide)
     {
-    // 1. look for all the words that are not yet hidden
+    
     List<Word> visibleWords = new List<Word>();
     foreach (Word word in _words)
     {
@@ -36,7 +42,7 @@ public class Scripture
         }
     }
 
-    // 2. a word is selected at random and then hidden
+    
     Random random = new Random();
     int wordsToSelect = Math.Min(numberToHide, visibleWords.Count);
 
@@ -61,7 +67,7 @@ public class Scripture
         return $"{_reference.GetDisplayText()} {scriptureText.Trim()}";
     }
 
-    //3. Check if all the words are already hidden
+   
     public bool IsCompletelyHidden()
     {
         foreach (Word word in _words)

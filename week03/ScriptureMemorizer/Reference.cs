@@ -1,5 +1,8 @@
 // Create for Darwin J Tovar.
 //for CSE210 in BYU Pathway worldwide.
+// this program content:
+// 1. the function for a single verse
+// 2. function for a range of verses (example: Proverbs 3:5-6)
 
 using System;
 using System.Collections.Concurrent;
@@ -11,7 +14,7 @@ public class Reference
     private int _verse;
     private int _endVerse;
 
-    //the function for a single verse
+    
     public Reference(string book, int chapter, int verse)
     {
         _book = book;
@@ -20,7 +23,7 @@ public class Reference
         _endVerse = 0; // It is initialized to 0 to indicate that there is no second verse.
     }
 
-    //function for a range of verses (example: Proverbs 3:5-6)
+    
     public Reference(string book, int chapter, int starVerse, int endVerse)
     {
         _book = book;
