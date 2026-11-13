@@ -1,5 +1,7 @@
 // Create for Darwin J Tovar.
 //for CSE210 in BYU Pathway worldwide.
+// this program content:
+//the encapsulation methode for the words and the hide.
 
 using System;
 
