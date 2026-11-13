@@ -15,20 +15,20 @@ class Program
     static void Main(string[] args)
     {
 
-        List<Scripture> scriptures = new List<Scripture>();
+        List<Scriptures> scriptures = new List<Scriptures>();
 
         
-        scriptures.Add(new Scripture(
-            new Reference("Proverbios", 3, 5, 6), 
+        scriptures.Add(new Scriptures(
+            new Reference("Proverbs", 3, 5, 6), 
             "Trust in the Lord with all your heart, and do not lean on your own understanding."
         ));
 
-        scriptures.Add(new Scripture(
-            new Reference("Juan", 3, 16), 
+        scriptures.Add(new Scriptures(
+            new Reference("Jhon", 3, 16), 
             "For God so loved the world that He gave His only begotten Son."
         ));
 
-        scriptures.Add(new Scripture(
+        scriptures.Add(new Scriptures(
             new Reference("Mosíah", 2, 17), 
             "When you are in the service of your fellow beings, you are only in the service of your God."
         ));
@@ -36,7 +36,7 @@ class Program
         
         Random random = new Random();
         int randomIndex = random.Next(scriptures.Count);
-        Scripture selectedScripture = scriptures[randomIndex];
+        Scriptures selectedScripture = scriptures[randomIndex];
 
         
         while (true)
